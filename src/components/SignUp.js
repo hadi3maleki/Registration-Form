@@ -8,7 +8,7 @@ const SignUp = () => {
         confirmPassword: "",
         isAccepted: false
     });
-    const changeHandler =  (event)=> {
+    const changeHandler =  event=> {
        if(event.target.name === 'isAccepted'){
             setData({...data, [event.target.name]: event.target.checked});
        }
