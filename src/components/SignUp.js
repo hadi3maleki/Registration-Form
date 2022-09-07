@@ -16,7 +16,7 @@ const SignUp = () => {
     useEffect ( () => {
         setErrors(validation(data))
         // console.log(errors)
-        },[data]
+        },[data, touched]
     )
 
     //------------------------------------------
@@ -29,7 +29,7 @@ const SignUp = () => {
        }   
        console.log(data)
     }
-    
+
     //------------------------------------------
     const focusHandler = event=> {
         setTouched({...touched, [event.target.name]: true })
