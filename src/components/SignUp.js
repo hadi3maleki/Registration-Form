@@ -34,12 +34,28 @@ const SignUp = () => {
     const focusHandler = event=> {
         setTouched({...touched, [event.target.name]: true })
     }
+    //------------------------------------------
+    const submitHandler = event =>{
+        event.preventDefault();
+        if(!Object.keys(errors).length){
+            console.log(data)
+        }else{
+            setTouched({
+                name: true,
+                email: true,
+                password: true,
+                confirmPassword: true,
+                isAccepted: true
+            })
+        }
+        
+    }
 
     //------------------------------------------
     return (
         <div>
             
-            <form>
+            <form onSubmit={submitHandler}>
                 <h2>SignUp</h2>
                 <div>
                     <label>Name</label>
