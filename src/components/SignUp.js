@@ -50,25 +50,25 @@ const SignUp = () => {
                 <div>
                     <label>Email</label>
                     <input type="text" name='email' value={data.email} onChange = {changeHandler} onFocus={focusHandler}/>
-                    {errors.email && touched.name &&  <span>{errors.email}</span>}
+                    {errors.email && touched.email &&  <span>{errors.email}</span>}
                 </div>
 
                 <div>
                     <label>Password</label>
                     <input type="password" name='password' value={data.password} onChange = {changeHandler} onFocus={focusHandler}/>
-                    {errors.password && touched.name &&  <span>{errors.password}</span>}
+                    {errors.password && touched.password &&  <span>{errors.password}</span>}
                 </div>
 
                 <div>
                     <label>Confirm Password</label>
                     <input type="password" name='confirmPassword' value={data.confirmPassword} onChange = {changeHandler} onFocus={focusHandler}/>
-                    {errors.confirmPassword && touched.name &&  <span>{errors.confirmPassword}</span>}
+                    {errors.confirmPassword && touched.confirmPassword &&  <span>{errors.confirmPassword}</span>}
                 </div>
 
                 <div>
                     <label>I accept terms of privacy policy</label>
                     <input type="checkbox" name='isAccepted' value={data.isAccepted} onChange = {changeHandler} onFocus={focusHandler}/>
-                    {errors.isAccepted && touched.name &&  <span>{errors.isAccepted}</span>}
+                    {errors.isAccepted && touched.isAccepted &&  <span>{errors.isAccepted}</span>}
                 </div>
 
                 <div>
