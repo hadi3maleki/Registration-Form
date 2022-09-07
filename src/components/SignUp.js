@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import {validation} from './validation.js'
 const SignUp = () => {
     const [data, setData] = useState({
         name:"",
@@ -8,6 +8,15 @@ const SignUp = () => {
         confirmPassword: "",
         isAccepted: false
     });
+    const [errors, setErrors] = useState({});
+    useEffect ( ()=>{
+        setErrors(validation(data))
+        console.log(errors)
+    }
+    
+    ,[data])
+
+    
     const changeHandler =  event=> {
        if(event.target.name === 'isAccepted'){
             setData({...data, [event.target.name]: event.target.checked});
