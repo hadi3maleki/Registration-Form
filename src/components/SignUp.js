@@ -5,6 +5,8 @@ import { ToastContainer } from 'react-toastify';
 import { notify } from './toast.js';
 import 'react-toastify/dist/ReactToastify.css';
 
+import styles from './SignUp.module.css';
+
 const SignUp = () => {
     //------------------------------------------
     const [data, setData] = useState({
@@ -62,7 +64,7 @@ const SignUp = () => {
 
     //------------------------------------------
     return (
-        <div>
+        <div className= {styles.container}>
             
             <form onSubmit={submitHandler}>
                 <h2>SignUp</h2>
