@@ -76,3 +76,12 @@
     height: 30px;
     border: 1px solid #1a73e8;
 }
+
+.checkBoxContainer{
+    display: flex;
+    font-size: 0.85rem;
+    flex-direction: row !important;
+    align-items: center;
+    height: 20px !important;
+    text-align: center;
+}

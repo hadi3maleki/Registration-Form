@@ -84,52 +84,58 @@ const SignUp = () => {
                 <div className= {styles.formField}>
                     <label>Email</label>
                     <input
-                    className= {errors.email && touched.email ?  styles.uncompleted : styles.formInput} 
-                    type="text" 
-                    name='email' 
-                    value={data.email} 
-                    onChange = {changeHandler} 
-                    onFocus={focusHandler}/>
+                        className= {errors.email && touched.email ?  styles.uncompleted : styles.formInput} 
+                        type="text" 
+                        name='email' 
+                        value={data.email} 
+                        onChange = {changeHandler} 
+                        onFocus={focusHandler}
+                    />
                     {errors.email && touched.email &&  <span>{errors.email}</span>}
                 </div>
 
                 <div className= {styles.formField}>
                     <label>Password</label>
                     <input
-                    className= {errors.password && touched.password ?  styles.uncompleted : styles.formInput} 
-                    type="password" 
-                    name='password' 
-                    value={data.password} 
-                    onChange = {changeHandler} 
-                    onFocus={focusHandler}/>
+                        className= {errors.password && touched.password ?  styles.uncompleted : styles.formInput} 
+                        type="password" 
+                        name='password' 
+                        value={data.password} 
+                        onChange = {changeHandler} 
+                        onFocus={focusHandler}
+                    />
                     {errors.password && touched.password &&  <span>{errors.password}</span>}
                 </div>
 
                 <div className= {styles.formField}>
                     <label>Confirm Password</label>
                     <input
-                    className= {errors.confirmPassword && touched.confirmPassword ?  styles.uncompleted : styles.formInput} 
-                    type="password" 
-                    name='confirmPassword' 
-                    value={data.confirmPassword} 
-                    onChange = {changeHandler} 
-                    onFocus={focusHandler}/>
+                        className= {errors.confirmPassword && touched.confirmPassword ?  styles.uncompleted : styles.formInput} 
+                        type="password" 
+                        name='confirmPassword' 
+                        value={data.confirmPassword} 
+                        onChange = {changeHandler} 
+                        onFocus={focusHandler}
+                    />
                     {errors.confirmPassword && touched.confirmPassword &&  <span>{errors.confirmPassword}</span>}
                 </div>
 
                 <div className= {styles.formField}>
-                    <label>I accept terms of privacy policy</label>
-                    <input
-                    className= {errors.isAccepted && touched.isAccepted ?  styles.uncompleted : styles.formInput} 
-                    type="checkbox" 
-                    name='isAccepted' 
-                    value={data.isAccepted} 
-                    onChange = {changeHandler} 
-                    onFocus={focusHandler}/>
+                    <div className={styles.checkBoxContainer}>
+                        <label>I accept terms of privacy policy</label>
+                        <input
+                            
+                            type="checkbox" 
+                            name='isAccepted' 
+                            value={data.isAccepted} 
+                            onChange = {changeHandler} 
+                            onFocus={focusHandler}
+                        />
+                    </div>
                     {errors.isAccepted && touched.isAccepted &&  <span>{errors.isAccepted}</span>}
                 </div>
 
-                <div>
+                <div className={styles.formButtons}>
                     <a href='#'>login</a>
                     <button type='submit'>SignUp</button>
                 </div>
