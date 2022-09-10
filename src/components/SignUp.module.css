@@ -85,3 +85,7 @@
     height: 20px !important;
     text-align: center;
 }
+
+.formField:nth-child(6) label{
+    color: #1a73e8;
+}
