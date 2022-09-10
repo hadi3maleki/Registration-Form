@@ -46,7 +46,7 @@ const SignUp = () => {
         event.preventDefault();
         notify();
         if(!Object.keys(errors).length){
-            notify("You signed in successfully", "success")
+            notify("You signed up  successfully", "success")
         }else{
             notify("Invalid data!", "error")
             setTouched({
