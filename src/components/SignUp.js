@@ -67,7 +67,7 @@ const SignUp = () => {
         <div className= {styles.container}>
             
             <form onSubmit={submitHandler} className = {styles.formContainer}>
-                <h2>SignUp</h2>
+                <h2 className= {styles.header}>SignUp</h2>
                 <div>
                     <label>Name</label>
                     <input type="text" name='name' value={data.name} onChange = {changeHandler} onFocus={focusHandler}/>
