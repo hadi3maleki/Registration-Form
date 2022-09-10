@@ -22,3 +22,10 @@
     font-size: 1.8rem;
     color: #1a73e8;
 }
+
+.formField{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    height: 75px;
+}
