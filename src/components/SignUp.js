@@ -6,6 +6,7 @@ import { notify } from './toast.js';
 import 'react-toastify/dist/ReactToastify.css';
 
 import styles from './SignUp.module.css';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     //------------------------------------------
@@ -21,7 +22,7 @@ const SignUp = () => {
     const [touched, setTouched] = useState({});
     //------------------------------------------
     useEffect ( () => {
-        setErrors(validation(data))
+        setErrors(validation(data, "signup"))
         // console.log(errors)
         },[data, touched]
     )
@@ -34,7 +35,7 @@ const SignUp = () => {
        else{
             setData({...data, [event.target.name]: event.target.value});
        }   
-       console.log(data)
+    //    console.log(data)
     }
 
     //------------------------------------------
@@ -136,7 +137,7 @@ const SignUp = () => {
                 </div>
 
                 <div className={styles.formButtons}>
-                    <a href='#'>login</a>
+                    <Link to='/login'>login</Link>
                     <button type='submit'>SignUp</button>
                 </div>
                     
