@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <div>
-      <Switch>
-        <Route path= "/signup" component={SignUp}/>
-        <Route path= "/login" component={Login}/>
-        <Redirect from='/' to="/signup" />
-      </Switch>
+      <Routes>
+        <Route path = "/signup" element = {<SignUp />}/>
+        <Route path = "/login" element = {<Login/>}/>
+        <Route path ='/' element = {<Navigate to= "/signup"/>}/>
+      </Routes>
       
     </div>
   );
